@@ -45,6 +45,13 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+```
+## Swagger
+
+```
+run: npm run start:dev
+open: http://localhost:3000/api
 ```
 
 ## Test

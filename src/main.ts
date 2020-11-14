@@ -10,10 +10,11 @@ async function bootstrap() {
     .setDescription('The cats API description')
     .setVersion('1.0')
     .addTag('cats')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
   SwaggerModule.setup('api', app, document);
 
-  await app.listen(3000);
+  await app.listen(3001);
 }
 bootstrap();

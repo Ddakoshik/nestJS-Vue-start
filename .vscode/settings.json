@@ -1,0 +1,27 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "my_pg",
+            "database": "postgres",
+            "username": "postgres",
+            "password": "changeme"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "new_mysql",
+            "database": "my_test_db",
+            "username": "root",
+            "password": "helloworld"
+        }
+    ]
+}

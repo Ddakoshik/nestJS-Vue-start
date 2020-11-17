@@ -8,6 +8,7 @@ const port = process.env.PORT || 8080;
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
+  app.setGlobalPrefix('api');
 
   const options = new DocumentBuilder()
     .setTitle('Cats example')
@@ -17,9 +18,10 @@ async function bootstrap() {
     .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);
+  SwaggerModule.setup('swagger', app, document);
 
   await app.listen(port);
   Logger.log(`Server running on http://localhost:${port}`, 'Bootstrap')
+  Logger.log(`Server running on http://localhost:${port}/swagger`, 'Swagger')
 }
 bootstrap();

@@ -31,4 +31,14 @@ export class CatsController {
   findOne(@Param('id') id: string): Cat {
     return this.catsService.findOne(+id);
   }
+
+  @Get()
+  @ApiResponse({
+    status: 200,
+    description: 'The found record',
+    type: Cat,
+  })
+  findAll(): Cat[] {
+    return this.catsService.findAll();
+  }
 }

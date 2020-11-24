@@ -9,6 +9,7 @@ const port = process.env.PORT || 8080;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.setGlobalPrefix('api');
+  app.enableCors();
 
   const options = new DocumentBuilder()
     .setTitle('Cats example')
